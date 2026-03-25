@@ -1,0 +1,144 @@
+{
+    "layer": "top",
+    "position": "top",
+    "margin-top": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    "height": 25,
+    "spacing": 0,
+
+    "modules-left": ["group/launcher",
+    "hyprland/workspaces",
+    "cpu",
+    "temperature",
+    "disk",
+    "mpris",
+    "custom/cava"
+    ],
+
+    "modules-center": ["clock"],
+    "modules-right": ["network",
+    "bluetooth",
+    "pulseaudio",
+    "backlight",
+    "power-profiles-daemon",
+    "battery"
+    ],
+
+    "group/launcher": {
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 200,
+            "children-class": "launcher-child",
+            "transition-left-to-right": true
+        },
+        "modules": [
+            "custom/launcher", 
+            "custom/logout",
+            "custom/reboot",
+            "custom/poweroff"
+        ]
+    },
+
+    "custom/launcher": {
+        "format": "󰣇",
+        "on-click": "rofi -show drun",
+        "tooltip": false
+    },
+
+    "custom/logout": {
+        "format": "󰍃",
+        "on-click": "hyprctl dispatch exit",
+        "tooltip-format": "Logout"
+    },
+
+    "custom/reboot": {
+        "format": "󰜉",
+        "on-click": "reboot",
+        "tooltip-format": "Reboot"
+    },
+
+    "custom/poweroff": {
+        "format": "",
+        "on-click": "poweroff",
+        "tooltip-format": "Power Off"
+    },
+
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "on-click": "activate",
+        "all-outputs": true
+    },
+
+    "cpu": { 
+        "format": " {usage}%",
+        "states": { "low": 0, "medium": 50, "high": 80 }
+    },
+
+    "temperature": { 
+        "format": " {temperatureC}°C",
+        "critical-threshold": 75,
+        "format-critical": " {temperatureC}°C"
+    },
+
+    "disk": { 
+        "format": "󰋊 {percentage_used}%",
+        "states": { "high": 85 }
+    },
+
+    "clock": {
+        "format": "󱑂 {:%H:%M  |  %a %d %b}",
+        "locale": "fr_FR.UTF-8"
+    },
+
+    "network": {
+        "format-wifi": "  {essid}",
+        "format-disconnected": "󰖪 Off",
+        "max-length": 20
+    },
+
+    "bluetooth": { "format": "" },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟 Muet",
+        "format-icons": { "default": ["", "", " "] }
+    },
+
+    "backlight": { "format": "󰃠 {percent}%" },
+
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+          "default": " ",
+          "performance": " ",
+          "balanced": "",
+          "power-saver": ""
+        }
+    },
+
+    "mpris": {
+        "format": "{status_icon} {artist} - {title}",
+        "status-icons": {
+            "playing": " ",
+            "paused": " "
+        },
+        "max-length": 35
+    },
+
+    "custom/cava": {
+        "exec": "~/.config/waybar/scripts/waybar-cava.sh",
+        "format": "{}",
+        "tooltip": false
+    },
+
+    "battery": {
+        "states": { "good": 95, "warning": 40, "critical": 20 },
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format": "{icon} {capacity}%",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    }
+}

@@ -1,0 +1,161 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", "Roboto";
+    font-size: 14px;
+    border: none;
+    border-radius: 0;
+}
+
+window#waybar {
+    background-color: rgba(35, 38, 39, 0.6);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+#custom-launcher {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 4px 14px;
+    padding-right: 17px;
+    margin: 5px 5px;
+    border-radius: 2px;
+    min-width: 14px;
+}
+
+/* Styling for the new power buttons */
+#custom-logout,
+#custom-reboot,
+#custom-poweroff {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 4px 14px;
+    padding-right: 17px;
+    margin: 5px 5px;
+    border-radius: 2px;
+    min-width: 14px;
+}
+
+#custom-logout { color: #D9E9CF; }
+#custom-reboot { color: #D9E9CF; }
+#custom-poweroff { color: #D9E9CF; }
+
+/* Ensure they are visible when the drawer opens */
+.launcher-child {
+    opacity: 1;
+    margin-left: 5px;
+}
+
+#power-profiles-daemon,
+#cpu,
+#temperature,
+#disk,
+#network,
+#pulseaudio,
+#backlight,
+#battery {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 4px 14px;
+    padding-right: 20px;
+    margin: 5px 5px;
+    border-radius: 2px;
+    min-width: 16px;
+}
+
+#bluetooth {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 4px 14px;
+    margin: 5px 5px;
+    border-radius: 2px;
+    color: #D9E9CF;
+    min-width: 14px;
+}
+
+#workspaces {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 4px 4px;
+    margin: 5px 5px;
+    border-radius: 2px;
+    min-width: 4px;
+}
+
+#custom-launcher {
+    margin-left: 14px;
+    color: #B6CEB4;
+    font-size: 16px;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    color: #D9E9CF;
+}
+
+#workspaces button.active {
+    color: #B6CEB4;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#clock {
+    background-color: transparent;
+    font-weight: bold;
+    padding: 0 15px;
+    color: #D9E9CF;
+}
+
+/* Music and Visualizer Styling */
+#mpris, #custom-cava{
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 4px 14px;
+    margin: 5px 5px;
+    border-radius: 2px;
+}
+
+#mpris {
+    color: #D9E9CF;
+}
+
+#custom-cava {
+    background-color: rgba(255, 255, 255, 0);
+    padding: 4px 14px;
+    margin: 5px 5px;
+    border-radius: 2px;
+    font-family: "JetBrainsMono Nerd Font";
+    min-width: 120px;
+    color: #D9E9CF; /* Use one of your chosen light green colors */
+}
+
+/* Tooltip styling to match your square theme */
+tooltip {
+    background: rgba(35, 38, 39, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+}
+
+tooltip label {
+    color: #ffffff;
+    font-family: "JetBrainsMono Nerd Font";
+    padding: 8px;
+}
+
+/* Dynamic Colors (Green to Red) */
+#cpu { color: #9ece6a; }
+#cpu.medium { color: #e0af68; }
+#cpu.high { color: #f7768e; }
+
+#temperature { color: #9ece6a; }
+#temperature.critical { color: #f7768e; }
+
+#disk { color: #9ece6a; }
+#disk.high { color: #f7768e; }
+
+#battery { color: #9ece6a; }
+#battery.warning { color: #e0af68; }
+#battery.critical:not(.charging) { color: #f7768e; }
+
+#power-profiles-daemon.power-saver { color: #9ece6a; }
+#power-profiles-daemon.balanced { color: #e0af68; }
+#power-profiles-daemon.perfomance { color: #f7768e; }
+
+/* Static Accents */
+#network { color: #D9E9CF; }
+#pulseaudio { color: #D9E9CF; }
+#backlight { color: #D9E9CF; }
+#power-profiles-daemon { color: #ff9e64; } /* Warm Orange for Power */
+
+#battery { margin-right: 10px; }

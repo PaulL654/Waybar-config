@@ -12,6 +12,7 @@
     "cpu",
     "temperature",
     "disk",
+    "memory",
     "mpris",
     "custom/cava"
     ],
@@ -73,6 +74,13 @@
     "cpu": { 
         "format": " {usage}%",
         "states": { "low": 0, "medium": 50, "high": 80 }
+    },
+
+    "memory": {
+        "interval": 10,
+        "format": "  {percentage}%",
+        "states": { "low": 0, "medium": 50, "high": 80 },
+        "tooltip": true
     },
 
     "temperature": { 

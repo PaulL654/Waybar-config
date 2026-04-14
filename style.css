@@ -44,6 +44,7 @@ window#waybar {
 
 #power-profiles-daemon,
 #cpu,
+#memory,
 #temperature,
 #disk,
 #network,
@@ -137,6 +138,10 @@ tooltip label {
 #cpu { color: #9ece6a; }
 #cpu.medium { color: #e0af68; }
 #cpu.high { color: #f7768e; }
+
+#memory { color: #9ece6a; }
+#memory.medium { color: #e0af68; }
+#memory.high { color: #f7768e; }
 
 #temperature { color: #9ece6a; }
 #temperature.critical { color: #f7768e; }

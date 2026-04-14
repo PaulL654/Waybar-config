@@ -14,16 +14,16 @@
     "disk",
     "memory",
     "mpris",
-    "custom/cava"
     ],
 
     "modules-center": ["clock"],
-    "modules-right": ["network",
+    "modules-right": ["custom/cava",
+    "network",
     "bluetooth",
     "pulseaudio",
     "backlight",
     "power-profiles-daemon",
-    "battery"
+    "battery",
     ],
 
     "group/launcher": {
